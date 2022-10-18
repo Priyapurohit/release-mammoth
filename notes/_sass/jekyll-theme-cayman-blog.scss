@@ -1,7 +1,7 @@
 @import "normalize";
 @import "rouge-github";
 @import "variables";
-@import url('https://fonts.googleapis.com/css?family=Open+Sans:400,700');
+
 @import "blog";
 
 @mixin large {
@@ -25,11 +25,15 @@
 * {
   box-sizing: border-box;
 }
+@font-face {
+  font-family:'Aeonik';
+  src: url('../../font/Aeonik-Regular.otf');
+}
 
 body {
   padding: 0;
   margin: 0;
-  font-family: "Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-family: Aeonik !important;
   font-size: 16px;
   line-height: 1.5;
   color: $body-text-color;
@@ -55,10 +59,11 @@ body {
 
 a {
   color: $body-link-color;
-  text-decoration: none;
+  text-decoration: none !important;
 
   &:hover {
-    text-decoration: underline;
+    text-decoration: none !important;
+    color: #00866d !important;
   }
 }
 
@@ -109,15 +114,14 @@ a {
 .page-header {
   color: $header-heading-color;
   text-align: center;
-  background-color: $header-bg-color;
-  background-image: linear-gradient(120deg, $header-bg-color-secondary, $header-bg-color);
+  background-color: #f5f5f5;
 
   @include large {
-    padding: 5rem 6rem;
+    padding: 4rem 6rem;
   }
 
   @include medium {
-    padding: 3rem 4rem;
+    padding: 2rem 4rem;
   }
 
   @include small {
@@ -128,6 +132,7 @@ a {
 .project-name {
   margin-top: 0;
   margin-bottom: 0.1rem;
+  color: #000;
 
   @include large {
     font-size: 3.25rem;
@@ -187,20 +192,20 @@ a {
   }
 
   @include large {
-    max-width: 64rem;
-    padding: 3rem 6rem;
+    max-width: 1400px;
+    padding: 3rem 3rem;
     margin: 0 auto;
-    font-size: 1.1rem;
+    font-size: 16px;
   }
 
   @include medium {
     padding: 3rem 4rem;
-    font-size: 1.1rem;
+    font-size: 16px;
   }
 
   @include small {
     padding: 2rem 1rem;
-    font-size: 1rem;
+    font-size: 16px;
 
     ul,
     ol {
@@ -237,6 +242,9 @@ a {
     margin-bottom: 1rem;
     font-weight: normal;
     color: $section-headings-color;
+  }
+  h3 {
+    margin-top: 5px;
   }
 
   p {
