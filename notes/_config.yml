@@ -22,12 +22,13 @@ title: Mammoth release notes
 email: your-email@example.com
 description: >- # this means to ignore newlines until "baseurl:"
 baseurl: ""
-url: "https://priyapurohit.github.io/release-mammoth.github.io/notes" # the base hostname & protocol for your site, e.g. http://example.com
+url: "https://priyapurohit.github.io/release-mammoth.github.io/" # the base hostname & protocol for your site, e.g. http://example.com
 twitter_username: mammothio
 github_username:  mammoth
 
 # Build settings
 theme: jekyll-theme-cayman-blog
+theme: jekyll-theme-cayman
 # Add metadata
 github: [metadata]
 #add seo tags
